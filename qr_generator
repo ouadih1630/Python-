@@ -1,0 +1,13 @@
+# Import the 'segno' library for QR code generation
+import segno
+
+# Create a QR code with the specified URL
+url_to_encode = "https://www.linkedin.com/in/ouadih-meriem-6894771a6/"
+qrcode = segno.make_qr(url_to_encode)
+
+# Save the QR code as an image file
+output_filename = "basic_qrcode.png"
+qrcode.save(output_filename)
+
+# Display a message indicating that the QR code has been saved
+print(f"QR code saved as '{output_filename}' for the LinkedIn profile: {url_to_encode}")
